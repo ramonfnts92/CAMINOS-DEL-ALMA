@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contacto | Caminos del Alma</title>
+
+  <meta
+    name="description"
+    content="Contacta a Caminos del Alma por WhatsApp al +56 9 9745 9180. Consulta por nuestros servicios, sesiones presenciales y online, y disponibilidad."
+  >
+
+  <style>
+    :root {
+      --crema: #f0d699;
+      --oliva: #899e51;
+      --verde: #4b7550;
+      --petroleo: #2f4d4d;
+      --blanco: #fffaf0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--crema);
+      color: var(--petroleo);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      min-height: 106px;
+      padding: 18px 3.5%;
+      background: var(--petroleo);
+      color: var(--crema);
+      border-bottom: 1px solid var(--oliva);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font: 29px Georgia, serif;
+      white-space: nowrap;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 8px;
+      font: 13px Arial, sans-serif;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .brand-symbol {
+      width: 71px;
+      height: 71px;
+      border: 1.5px solid var(--crema);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .brand-symbol svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav a {
+      position: relative;
+      padding: 13px 0;
+      color: var(--blanco);
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: var(--crema);
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      bottom: 0;
+      height: 2px;
+      background: var(--crema);
+    }
+
+    .booking {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 23px;
+      border-radius: 7px;
+      font: 20px Georgia, serif;
+    }
+
+    .gold {
+      background: var(--crema);
+      color: var(--petroleo);
+      border: 1px solid var(--crema);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--crema);
+      font-size: 24px;
+    }
+
+    .page-hero {
+      padding: 105px 6% 90px;
+      text-align: center;
+      background: var(--petroleo);
+      color: var(--crema);
+    }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+      max-width: 900px;
+      margin: 0 auto 25px;
+      font: clamp(44px, 5vw, 70px)/1.12 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .page-hero h1 em {
+      color: var(--oliva);
+      font-style: normal;
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--blanco);
+    }
+
+
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      margin: 0 0 20px;
+      font: clamp(34px, 4vw, 50px)/1.15 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .intro p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .contact-section {
+      padding: 85px 5% 90px;
+    }
+
+    .contact-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      min-width: 0;
+      padding: 36px;
+      border: 1px solid rgba(47, 77, 77, .28);
+      border-radius: 14px;
+      background: rgba(255, 250, 240, .3);
+    }
+
+    .contact-icon {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--verde);
+      color: var(--crema);
+    }
+
+    .contact-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 16px;
+      font: 30px/1.2 Georgia, serif;
+      overflow-wrap: break-word;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .contact-card .phone-number {
+      margin: 22px 0;
+      font: clamp(25px, 3vw, 36px)/1.3 Georgia, serif;
+    }
+
+    .contact-card .contact-hint {
+      margin-top: 22px;
+      font-size: 15px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 5px;
+    }
+
+    .contact-actions .booking {
+      font-size: 19px;
+      text-align: center;
+    }
+
+    .contact-card .form-intro {
+      margin: 0 0 28px;
+      font-size: 16px;
+    }
+
+    .contact-form fieldset {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: grid;
+      gap: 22px;
+    }
+
+    .form-field {
+      min-width: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .form-field label {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .form-field label span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-width: 0;
+      min-height: 52px;
+      padding: 13px 15px;
+      border: 1px solid rgba(47, 77, 77, .4);
+      border-radius: 8px;
+      background: rgba(255, 250, 240, .7);
+      color: var(--petroleo);
+      font: 16px/1.5 Arial, Helvetica, sans-serif;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #566861;
+      opacity: 1;
+    }
+
+    .form-field textarea {
+      min-height: 155px;
+      resize: vertical;
+    }
+
+    .form-field select {
+      padding-right: 30px;
+      text-overflow: ellipsis;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: 2px solid var(--verde);
+      outline-offset: 2px;
+      border-color: var(--verde);
+    }
+
+    .form-submit {
+      width: 100%;
+      min-height: 56px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .contact-card .form-note {
+      margin-top: 13px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .contact-information {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-information > h3 {
+      margin-bottom: 0;
+    }
+
+    .contact-information .contact-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .contact-information .contact-icon svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-row > div:last-child {
+      min-width: 0;
+    }
+
+    .contact-information .contact-label {
+      font-size: 15px;
+    }
+
+    .contact-information .phone-number {
+      margin: 5px 0 0;
+      font-size: clamp(23px, 2.4vw, 30px);
+    }
+
+    .contact-information .contact-actions {
+      margin-top: 22px;
+    }
+
+    .contact-information .contact-actions .booking {
+      font-size: 18px;
+      padding: 13px 18px;
+    }
+
+    .contact-detail {
+      padding-top: 28px;
+      border-top: 1px solid rgba(47, 77, 77, .25);
+    }
+
+    .contact-detail h4 {
+      margin: 0 0 14px;
+      font: 25px/1.25 Georgia, serif;
+    }
+
+    .button-green {
+      background: var(--verde);
+      color: var(--blanco);
+      border: 1px solid var(--verde);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--petroleo);
+      border: 1px solid var(--petroleo);
+    }
+
+    .booking {
+      line-height: 1.35;
+      transition: filter .2s;
+    }
+
+    .booking:hover {
+      filter: brightness(.94);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--oliva);
+      outline-offset: 5px;
+    }
+
+    .mobile-toggle {
+      cursor: pointer;
+    }
+
+    .cta {
+      padding: 85px 5%;
+      background: var(--verde);
+      color: var(--crema);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 20px;
+      font: clamp(34px, 4vw, 52px)/1.15 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      background: var(--crema);
+      color: var(--petroleo);
+      font-size: 13px;
+    }
+
+    footer span {
+      font: 18px Georgia, serif;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 1250px) {
+      .brand {
+        font-size: 22px;
+      }
+
+      .brand-symbol {
+        width: 55px;
+        height: 55px;
+      }
+
+      .brand-symbol svg {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand small {
+        font-size: 10px;
+      }
+
+      nav {
+        gap: 22px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      header > .booking {
+        font-size: 17px;
+        padding: 12px 16px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-wrap: wrap;
+      }
+
+      .mobile-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      header > .booking {
+        display: none;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .brand {
+        font-size: 19px;
+      }
+
+      .brand-symbol {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-symbol svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .brand small {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+      }
+
+      .page-hero {
+        padding: 75px 7% 65px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+      }
+
+      header {
+        gap: 16px;
+      }
+
+      .brand {
+        gap: 10px;
+        font-size: clamp(15px, 4.4vw, 19px);
+      }
+
+      .brand-symbol {
+        flex-shrink: 0;
+      }
+
+      .contact-section {
+        padding: 60px 5%;
+      }
+
+      .contact-card {
+        padding: 30px 22px;
+      }
+
+      .contact-actions {
+        width: 100%;
+      }
+
+      .contact-actions .booking {
+        width: 100%;
+      }
+
+      .cta {
+        padding: 65px 6%;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <header>
+
+    <a class="brand" href="index.html" aria-label="Caminos del Alma, inicio">
+
+      <span class="brand-symbol">
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+
+      </span>
+
+      <span>
+        CAMINOS DEL ALMA
+        <small>ESPIRITUALIDAD QUE ACOMPAÑA</small>
+      </span>
+
+    </a>
+
+
+    <button
+      class="mobile-toggle"
+      type="button"
+      aria-controls="main-nav"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+    <nav id="main-nav" aria-label="Navegación principal">
+
+      <a href="index.html">Inicio</a>
+
+      <a href="nosotras.html">Nosotras</a>
+
+      <a href="servicios.html">Servicios</a>
+
+      <a href="testimonios.html">Testimonios</a>
+
+      <a class="active" href="contacto.html" aria-current="page">Contacto</a>
+
+    </nav>
+
+
+    <a
+      class="booking gold"
+      href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20reservar%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Reservar sesión
+    </a>
+
+  </header>
+
+
+  <main>
+
+    <section class="page-hero" aria-labelledby="page-title">
+
+      <p class="eyebrow">CONTACTO</p>
+
+      <h1 id="page-title">
+        Tu camino comienza<br>
+        <em>con una conversación</em>
+      </h1>
+
+      <p>
+        Estamos aquí para escucharte. Escríbenos para conocer nuestros
+        servicios, resolver tus dudas o coordinar una sesión.
+      </p>
+
+    </section>
+
+
+    <section class="contact-section" aria-labelledby="contact-title">
+
+      <div class="intro">
+
+        <h2 id="contact-title">Conversemos con calma</h2>
+
+        <p>
+          Completa el formulario o contáctanos directamente.
+          Te orientaremos sobre los servicios, las modalidades y la disponibilidad.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <article class="contact-card form-card">
+
+          <h3 id="query-title">Envíanos tu consulta</h3>
+
+          <p class="form-intro">
+            Cuéntanos qué necesitas y qué servicio te interesa.
+            El correo y el teléfono son opcionales.
+          </p>
+
+          <form
+            id="query-form"
+            class="contact-form"
+            action="https://wa.me/56997459180"
+            method="get"
+            aria-labelledby="query-title"
+            aria-describedby="query-note"
+          >
+
+            <fieldset id="query-fields" disabled>
+
+              <div class="form-field">
+
+                <label for="query-name">Nombre completo</label>
+
+                <input
+                  id="query-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Escribe tu nombre"
+                  maxlength="100"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                
+
+                <label for="query-phone">
+                  Teléfono / WhatsApp <span>(opcional)</span>
+                </label>
+
+                <input
+                  id="query-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+56 9 1234 5678"
+                  maxlength="30"
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="query-service">Servicio de interés</label>
+
+                <select id="query-service" name="service" required>
+
+                  <option value="" selected disabled>
+                    Selecciona un servicio
+                  </option>
+
+                  <option value="Acompañamiento espiritual en la enfermedad">
+                    Acompañamiento espiritual en la enfermedad
+                  </option>
+
+                  <option value="Sanación espiritual">
+                    Sanación espiritual
+                  </option>
+
+                  <option value="Orientación personal">
+                    Orientación personal
+                  </option>
+
+                  <option value="Consulta general">
+                    Quisiera orientación para elegir
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="query-message">Tu consulta</label>
+
+                <textarea
+                  id="query-message"
+                  name="message"
+                  rows="6"
+                  maxlength="2000"
+                  placeholder="Cuéntanos qué necesitas o qué te gustaría consultar."
+                  required
+                ></textarea>
+
+              </div>
+
+
+              <button class="booking button-green form-submit" type="submit">
+                Enviar consulta por WhatsApp
+              </button>
+
+            </fieldset>
+
+          </form>
+
+          <p id="query-note" class="form-note">
+            Se abrirá WhatsApp con tu consulta lista para revisar y enviar.
+          </p>
+
+          <noscript>
+            <p class="form-note">
+              Puedes
+              <a href="https://wa.me/56997459180">
+                escribirnos directamente por WhatsApp
+              </a>.
+            </p>
+          </noscript>
+
+        </article>
+
+
+        <aside class="contact-card contact-information" aria-labelledby="contact-info-title">
+
+          <h3 id="contact-info-title">Información de contacto</h3>
+
+          <div>
+
+            <div class="contact-row">
+
+              <div class="contact-icon" aria-hidden="true">
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path>
+                  <path d="M8 10h8M8 14h5"></path>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <p class="contact-label">WhatsApp y llamadas</p>
+
+                <p class="phone-number">
+                  <a href="tel:+56997459180">+56 9 9745 9180</a>
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="contact-actions">
+
+              <a
+                class="booking button-green"
+                href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20por%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir WhatsApp
+              </a>
+
+              <a class="booking button-outline" href="tel:+56997459180">
+                Llamar
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <h4>Atención presencial y online</h4>
+
+            <p>
+              Consulta la modalidad disponible para el servicio que te
+              interesa. Al coordinar tu sesión, te indicaremos la dirección
+              o los detalles de conexión.
+            </p>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <h4>Horarios y disponibilidad</h4>
+
+            <p>
+              Escríbenos para conocer los horarios disponibles y coordinar
+              una fecha. Confirmaremos contigo los detalles de la reserva.
+            </p>
+
+          </div>
+
+          <!-- El mapa se añadirá cuando el cliente confirme su dirección. -->
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta" aria-labelledby="services-title">
+
+      <h2 id="services-title">Encuentra tu espacio de acompañamiento</h2>
+
+      <p>
+        Conoce nuestras propuestas de acompañamiento espiritual
+        y orientación personal, y consulta por la que más se acerque
+        a lo que buscas.
+      </p>
+
+      <a class="booking gold" href="servicios.html">
+        Conocer nuestros servicios
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      Caminos del Alma
+    </span>
+
+    <p>
+      El acompañamiento espiritual es complementario y no reemplaza la atención de salud.
+    </p>
+
+  </footer>
+
+
+  <script>
+    const toggle = document.querySelector(".mobile-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+
+      const open = nav.classList.toggle("open");
+
+      toggle.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+      toggle.setAttribute(
+        "aria-label",
+        open ? "Cerrar menú" : "Abrir menú"
+      );
+
+    });
+
+
+    // Prepara la consulta; el envío se confirma dentro de WhatsApp.
+
+    const queryForm = document.getElementById("query-form");
+    const queryFields = document.getElementById("query-fields");
+
+    const nameField = document.getElementById("query-name");
+    const phoneField = document.getElementById("query-phone");
+    const serviceField = document.getElementById("query-service");
+    const messageField = document.getElementById("query-message");
+
+    function buildWhatsAppUrl(values) {
+
+      const lines = [
+        "Hola, quisiera hacer una consulta en Caminos del Alma.",
+        "",
+        "Nombre: " + values.name
+      ];
+
+      
+
+      if (values.phone) {
+        lines.push("Teléfono / WhatsApp: " + values.phone);
+      }
+
+      lines.push(
+        "Servicio de interés: " + values.service,
+        "",
+        "Consulta:",
+        values.message
+      );
+
+      return (
+        "https://wa.me/56997459180?text=" +
+        encodeURIComponent(lines.join("\n"))
+      );
+
+    }
+
+    queryForm.addEventListener("input", event => {
+
+      if (typeof event.target.setCustomValidity === "function") {
+        event.target.setCustomValidity("");
+      }
+
+    });
+
+    queryForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      nameField.setCustomValidity(
+        nameField.value.trim() ? "" : "Escribe tu nombre."
+      );
+
+      messageField.setCustomValidity(
+        messageField.value.trim() ? "" : "Escribe tu consulta."
+      );
+
+      if (!queryForm.reportValidity()) {
+        return;
+      }
+
+      const destination = buildWhatsAppUrl({
+        name: nameField.value.trim(),
+        phone: phoneField.value.trim(),
+        service: serviceField.value,
+        message: messageField.value.trim()
+      });
+
+      window.location.assign(destination);
+
+    });
+
+    queryFields.disabled = false;
+  </script>
+
+</body>
+
+</html>

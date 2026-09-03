@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Testimonios | Caminos del Alma</title>
+
+  <meta
+    name="description"
+    content="Conoce las experiencias de quienes han encontrado en Caminos del Alma un espacio de escucha, acompañamiento y conexión."
+  >
+
+  <style>
+    :root {
+      --crema: #f0d699;
+      --oliva: #899e51;
+      --verde: #4b7550;
+      --petroleo: #2f4d4d;
+      --blanco: #fffaf0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--crema);
+      color: var(--petroleo);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      min-height: 106px;
+      padding: 18px 3.5%;
+      background: var(--petroleo);
+      color: var(--crema);
+      border-bottom: 1px solid var(--oliva);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font: 29px Georgia, serif;
+      white-space: nowrap;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 8px;
+      font: 13px Arial, sans-serif;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .brand-symbol {
+      width: 71px;
+      height: 71px;
+      border: 1.5px solid var(--crema);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .brand-symbol svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav a {
+      position: relative;
+      padding: 13px 0;
+      color: var(--blanco);
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: var(--crema);
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      bottom: 0;
+      height: 2px;
+      background: var(--crema);
+    }
+
+    .booking {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 23px;
+      border-radius: 7px;
+      font: 20px Georgia, serif;
+    }
+
+    .gold {
+      background: var(--crema);
+      color: var(--petroleo);
+      border: 1px solid var(--crema);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--crema);
+      font-size: 24px;
+    }
+
+    .page-hero {
+      padding: 105px 6% 90px;
+      text-align: center;
+      background: var(--petroleo);
+      color: var(--crema);
+    }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+      max-width: 900px;
+      margin: 0 auto 25px;
+      font: clamp(44px, 5vw, 70px)/1.12 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .page-hero h1 em {
+      color: var(--oliva);
+      font-style: normal;
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--blanco);
+    }
+
+    .testimonials {
+      padding: 90px 5%;
+      background: var(--crema);
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      margin: 0 0 20px;
+      font: clamp(34px, 4vw, 50px)/1.15 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .intro p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .testimonial-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .testimonial-card {
+      min-height: 330px;
+      padding: 35px 30px;
+
+      border: 1px solid rgba(47, 77, 77, .28);
+      border-radius: 14px;
+
+      background: rgba(255, 250, 240, .3);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .quote-mark {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 22px;
+
+      border-radius: 50%;
+      background: var(--verde);
+      color: var(--crema);
+
+      display: grid;
+      place-items: center;
+
+      font: 42px Georgia, serif;
+      line-height: 1;
+    }
+
+    .testimonial-card:nth-child(2) .quote-mark {
+      background: var(--oliva);
+    }
+
+    .testimonial-card:nth-child(3) .quote-mark {
+      background: var(--petroleo);
+    }
+
+    .testimonial-card blockquote {
+      flex: 1;
+      margin: 0;
+
+      font: 19px/1.65 Georgia, serif;
+      color: var(--petroleo);
+    }
+
+    .testimonial-card cite {
+      margin-top: 25px;
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--verde);
+    }
+
+    .privacy-note {
+      width: min(900px, 100%);
+      margin: 60px auto 0;
+      padding: 28px 35px;
+
+      border-top: 1px solid var(--oliva);
+      border-bottom: 1px solid var(--oliva);
+
+      text-align: center;
+    }
+
+    .privacy-note p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .cta {
+      padding: 85px 5%;
+      background: var(--verde);
+      color: var(--crema);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 20px;
+      font: clamp(34px, 4vw, 52px)/1.15 Georgia, serif;
+      font-weight: 400;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      background: var(--crema);
+      color: var(--petroleo);
+      font-size: 13px;
+    }
+
+    footer span {
+      font: 18px Georgia, serif;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 1250px) {
+      .brand {
+        font-size: 22px;
+      }
+
+      .brand-symbol {
+        width: 55px;
+        height: 55px;
+      }
+
+      .brand-symbol svg {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand small {
+        font-size: 10px;
+      }
+
+      nav {
+        gap: 22px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      header > .booking {
+        font-size: 17px;
+        padding: 12px 16px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-wrap: wrap;
+      }
+
+      .mobile-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      header > .booking {
+        display: none;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+      }
+
+      .testimonial-card {
+        min-height: 0;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .brand {
+        font-size: 19px;
+      }
+
+      .brand-symbol {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-symbol svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .brand small {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+      }
+
+      .page-hero {
+        padding: 75px 7% 65px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+      }
+
+      .testimonials {
+        padding: 60px 5%;
+      }
+
+      .testimonial-card {
+        padding: 30px 22px;
+      }
+
+      .testimonial-card blockquote {
+        font-size: 18px;
+      }
+
+      .cta {
+        padding: 65px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <a class="brand" href="index.html" aria-label="Caminos del Alma, inicio">
+
+      <span class="brand-symbol">
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+
+      </span>
+
+      <span>
+        CAMINOS DEL ALMA
+        <small>ESPIRITUALIDAD QUE ACOMPAÑA</small>
+      </span>
+
+    </a>
+
+
+    <button
+      class="mobile-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+    <nav aria-label="Navegación principal">
+
+      <a href="index.html">Inicio</a>
+
+      <a href="nosotras.html">Nosotras</a>
+
+      <a href="servicios.html">Servicios</a>
+
+      <a class="active" href="testimonios.html">Testimonios</a>
+
+      <a href="contacto.html">Contacto</a>
+
+    </nav>
+
+
+    <a
+      class="booking gold"
+      href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20reservar%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Reservar sesión
+    </a>
+
+  </header>
+
+
+  <main>
+
+    <section class="page-hero">
+
+      <p class="eyebrow">TESTIMONIOS</p>
+
+      <h1>
+        Experiencias que
+        <em>inspiran</em>
+      </h1>
+
+      <p>
+        Cada camino es único. Este espacio está pensado para compartir,
+        con autorización, las experiencias de quienes han encontrado en
+        Caminos del Alma un lugar de escucha y acompañamiento.
+      </p>
+
+    </section>
+
+
+    <section class="testimonials">
+
+      <div class="intro">
+
+        <h2>
+          Palabras de quienes nos han acompañado
+        </h2>
+
+        <p>
+          Queremos que este sea un espacio auténtico y cercano. Por eso,
+          los testimonios publicados serán compartidos únicamente con la
+          autorización de cada persona.
+        </p>
+
+      </div>
+
+
+      <div class="testimonial-grid">
+
+        <article class="testimonial-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <blockquote>
+            Próximamente compartiremos aquí la experiencia de una persona
+            que haya vivido un proceso de acompañamiento con Caminos del Alma.
+          </blockquote>
+
+          <cite>
+            PRÓXIMAMENTE
+          </cite>
+
+        </article>
+
+
+        <article class="testimonial-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <blockquote>
+            Este espacio se actualizará con testimonios reales,
+            respetando siempre la privacidad y autorización de quienes
+            deseen compartir su experiencia.
+          </blockquote>
+
+          <cite>
+            PRÓXIMAMENTE
+          </cite>
+
+        </article>
+
+
+        <article class="testimonial-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <blockquote>
+            Queremos que cada experiencia refleje de manera sincera
+            el acompañamiento, la escucha y el respeto que buscamos entregar.
+          </blockquote>
+
+          <cite>
+            PRÓXIMAMENTE
+          </cite>
+
+        </article>
+
+      </div>
+
+
+      <div class="privacy-note">
+
+        <p>
+          <strong>Privacidad y respeto:</strong>
+          los testimonios serán publicados solo con el consentimiento
+          de sus autores. Si una persona prefiere mantener su identidad
+          reservada, podremos utilizar iniciales o un nombre ficticio.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <h2>
+        ¿Quieres comenzar tu propio camino?
+      </h2>
+
+      <p>
+        Si deseas conocer nuestros servicios o consultar por una sesión,
+        escríbenos directamente. Será un gusto orientarte.
+      </p>
+
+      <a
+        class="booking gold"
+        href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20por%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Consultar por WhatsApp
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      Caminos del Alma
+    </span>
+
+    <p>
+      El acompañamiento espiritual es complementario y no reemplaza la atención de salud.
+    </p>
+
+  </footer>
+
+
+  <script>
+    const toggle = document.querySelector(".mobile-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+
+      const open = nav.classList.toggle("open");
+
+      toggle.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+      toggle.setAttribute(
+        "aria-label",
+        open ? "Cerrar menú" : "Abrir menú"
+      );
+
+    });
+  </script>
+
+</body>
+</html>

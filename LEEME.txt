@@ -1,0 +1,13 @@
+CAMINOS DEL ALMA — PÁGINA EN SECCIONES
+
+Descomprime el ZIP completo y abre index.html.
+Para actualizar tu página, reemplaza index.html, styles.css, script.js y la carpeta assets por los de este paquete. Conserva los nombres y las carpetas.
+No necesita instalación ni compilación.
+
+Secciones: Inicio, Nosotras, Servicios, Testimonios y Contacto.
+El menú desplaza hacia cada sección. Los servicios ahora muestran su información directamente en la página.
+Hero: opción 2, imagen espiritual cinematográfica. Imagen ilustrativa generada con IA.
+WhatsApp: +56 9 9745 9180.
+
+Contenido pendiente de datos reales del cliente: biografía de las profesionales y testimonios autorizados. No se han inventado reseñas, nombres ni credenciales.
+Para modificar textos, edita index.html; colores y distribución en styles.css.
