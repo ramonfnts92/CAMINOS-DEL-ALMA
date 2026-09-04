@@ -531,6 +531,8 @@
       }
     }
   </style>
+
+  <link rel="stylesheet" href="hero-compartido.css">
 </head>
 
 <body>
@@ -588,35 +590,54 @@
     </nav>
 
 
-    <a
-      class="booking gold"
-      href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20reservar%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Reservar sesión
-    </a>
-
   </header>
 
 
   <main>
 
-    <section class="page-hero">
+    <section class="shared-hero" data-shared-hero aria-labelledby="servicios-title">
+      <div class="shared-hero__images" id="servicios-hero-images" aria-hidden="true">
+        <img class="shared-hero__photo is-active" src="assets/hero.png" alt="" fetchpriority="high">
+        <img class="shared-hero__photo" src="assets/hero1.png" alt="" decoding="async">
+        <img class="shared-hero__photo" src="assets/hero2.png" alt="" decoding="async">
+      </div>
 
-      <p class="eyebrow">NUESTROS SERVICIOS</p>
+      <div class="shared-hero__shade"></div>
 
-      <h1>
-        Acompañamiento para
-        <em>tu camino</em>
-      </h1>
+      <div class="shared-hero__content">
+        <p class="shared-hero__eyebrow">NUESTROS SERVICIOS</p>
 
-      <p>
-        Cada experiencia es diferente. Conoce nuestras propuestas de
-        acompañamiento espiritual y encuentra el espacio que mejor se
-        adapte a lo que estás buscando.
-      </p>
+        <div class="shared-hero__flourish" aria-hidden="true">
+          <span></span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+          <span></span>
+        </div>
 
+        <h1 id="servicios-title">Acompañamiento para<br><em>tu camino</em></h1>
+
+        <div class="shared-hero__rule"></div>
+
+        <p class="shared-hero__text">
+          Cada experiencia es diferente. Conoce nuestras propuestas de acompañamiento espiritual
+          y encuentra el espacio que mejor se adapte a lo que estás buscando.
+        </p>
+
+        <div class="shared-hero__actions">
+          <a class="shared-hero__button shared-hero__button--whatsapp" href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20por%20los%20servicios%20de%20Caminos%20del%20Alma." target="_blank" rel="noopener noreferrer">
+            Consultar por WhatsApp
+          </a>
+          <a class="shared-hero__button shared-hero__button--cream" href="contacto.html">Ir a contacto</a>
+        </div>
+      </div>
+
+      <div class="shared-hero__controls" role="group" aria-label="Imágenes de portada" hidden>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 1 de 3" aria-controls="servicios-hero-images" aria-pressed="true"><span aria-hidden="true"></span></button>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 2 de 3" aria-controls="servicios-hero-images" aria-pressed="false"><span aria-hidden="true"></span></button>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 3 de 3" aria-controls="servicios-hero-images" aria-pressed="false"><span aria-hidden="true"></span></button>
+      </div>
     </section>
 
 
@@ -935,5 +956,6 @@
     });
   </script>
 
+  <script src="hero-compartido.js"></script>
 </body>
 </html>

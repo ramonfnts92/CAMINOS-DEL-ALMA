@@ -609,7 +609,86 @@
         padding: 65px 6%;
       }
     }
+    /* Lugares y horarios de atención. */
+    .locations {
+      width: min(1120px, 90%);
+      margin: 0 auto 85px;
+    }
+
+    .locations > h2 {
+      margin: 0 0 28px;
+      font: 36px/1.2 Georgia, serif;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .location-card {
+      padding: 28px;
+      border: 1px solid rgba(47, 77, 77, .28);
+      border-radius: 14px;
+      background: rgba(255, 250, 240, .3);
+    }
+
+    .location-card h3 {
+      margin: 0 0 8px;
+      font: 30px/1.2 Georgia, serif;
+    }
+
+    .location-card p,
+    .location-card address {
+      margin: 0 0 16px;
+      font-style: normal;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
+    .location-card .location-region {
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .location-card .booking {
+      margin-top: 6px;
+      font-size: 18px;
+    }
+
+    .location-map {
+      margin-top: 25px;
+    }
+
+    .location-map h3 {
+      margin: 0 0 16px;
+      font: 27px/1.25 Georgia, serif;
+    }
+
+    .location-map iframe {
+      display: block;
+      width: 100%;
+      height: 360px;
+      border: 1px solid rgba(47, 77, 77, .28);
+      border-radius: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .locations {
+        margin-bottom: 60px;
+      }
+
+      .location-map iframe {
+        height: 300px;
+      }
+    }
   </style>
+
+  <link rel="stylesheet" href="hero-compartido.css">
 
 </head>
 
@@ -671,34 +750,54 @@
     </nav>
 
 
-    <a
-      class="booking gold"
-      href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20reservar%20una%20sesi%C3%B3n%20en%20Caminos%20del%20Alma."
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Reservar sesión
-    </a>
-
   </header>
 
 
   <main>
 
-    <section class="page-hero" aria-labelledby="page-title">
+    <section class="shared-hero" data-shared-hero aria-labelledby="page-title">
+      <div class="shared-hero__images" id="contacto-hero-images" aria-hidden="true">
+        <img class="shared-hero__photo is-active" src="assets/hero.png" alt="" fetchpriority="high">
+        <img class="shared-hero__photo" src="assets/hero1.png" alt="" decoding="async">
+        <img class="shared-hero__photo" src="assets/hero2.png" alt="" decoding="async">
+      </div>
 
-      <p class="eyebrow">CONTACTO</p>
+      <div class="shared-hero__shade"></div>
 
-      <h1 id="page-title">
-        Tu camino comienza<br>
-        <em>con una conversación</em>
-      </h1>
+      <div class="shared-hero__content">
+        <p class="shared-hero__eyebrow">CONTACTO</p>
 
-      <p>
-        Estamos aquí para escucharte. Escríbenos para conocer nuestros
-        servicios, resolver tus dudas o coordinar una sesión.
-      </p>
+        <div class="shared-hero__flourish" aria-hidden="true">
+          <span></span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+          <span></span>
+        </div>
 
+        <h1 id="page-title">Tu camino comienza<br><em>con una conversación</em></h1>
+
+        <div class="shared-hero__rule"></div>
+
+        <p class="shared-hero__text">
+          Estamos aquí para escucharte. Escríbenos para conocer nuestros servicios,
+          resolver tus dudas o coordinar una sesión.
+        </p>
+
+        <div class="shared-hero__actions">
+          <a class="shared-hero__button shared-hero__button--whatsapp" href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20a%20Caminos%20del%20Alma." target="_blank" rel="noopener noreferrer">
+            Escribir por WhatsApp
+          </a>
+          <a class="shared-hero__button shared-hero__button--cream" href="servicios.html">Ver nuestros servicios</a>
+        </div>
+      </div>
+
+      <div class="shared-hero__controls" role="group" aria-label="Imágenes de portada" hidden>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 1 de 3" aria-controls="contacto-hero-images" aria-pressed="true"><span aria-hidden="true"></span></button>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 2 de 3" aria-controls="contacto-hero-images" aria-pressed="false"><span aria-hidden="true"></span></button>
+        <button class="shared-hero__dot" type="button" aria-label="Mostrar imagen 3 de 3" aria-controls="contacto-hero-images" aria-pressed="false"><span aria-hidden="true"></span></button>
+      </div>
     </section>
 
 
@@ -909,8 +1008,8 @@
 
             <p>
               Consulta la modalidad disponible para el servicio que te
-              interesa. Al coordinar tu sesión, te indicaremos la dirección
-              o los detalles de conexión.
+              interesa. Encuentra nuestras direcciones más abajo o consulta
+              los detalles de conexión para una sesión online.
             </p>
 
           </div>
@@ -921,16 +1020,98 @@
             <h4>Horarios y disponibilidad</h4>
 
             <p>
-              Escríbenos para conocer los horarios disponibles y coordinar
-              una fecha. Confirmaremos contigo los detalles de la reserva.
+              Revisa los días y horarios de cada localidad más abajo.
+              Para Talagante, consulta previamente la fecha exacta de atención.
             </p>
 
           </div>
 
-          <!-- El mapa se añadirá cuando el cliente confirme su dirección. -->
 
         </aside>
 
+      </div>
+
+    </section>
+
+
+    <section class="locations" aria-labelledby="locations-title">
+
+      <h2 id="locations-title">Dónde y cuándo atendemos</h2>
+
+      <div class="locations-grid">
+
+        <article class="location-card" aria-labelledby="buin-title">
+          <h3 id="buin-title">Buin</h3>
+          <p class="location-region">Buin, Región Metropolitana</p>
+
+          <address>Villa Santa Rosa, pasaje San Diego 392.</address>
+
+          <p><strong>Días:</strong> martes, miércoles y viernes.</p>
+          <p><strong>Horario:</strong> 11:00 a 16:00 horas.</p>
+          <p><strong>Atención por orden de llegada.</strong></p>
+
+          <a
+            class="booking button-green"
+            href="https://maps.app.goo.gl/3Fs6fPtUTNZbYN8e8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cómo llegar a Buin
+          </a>
+        </article>
+
+        <article class="location-card" aria-labelledby="talagante-title">
+          <h3 id="talagante-title">Talagante</h3>
+          <p class="location-region">Talagante, Región Metropolitana</p>
+
+          <address>Trebulco 3146, Villa Pablo Neruda.</address>
+
+          <p><strong>Días:</strong> jueves cada 15 días.</p>
+          <p><strong>Horario:</strong> 11:00 a 17:00 horas.</p>
+          <p>Consultar previamente la fecha exacta de atención.</p>
+
+          <a
+            class="booking button-green"
+            href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20la%20pr%C3%B3xima%20fecha%20de%20atenci%C3%B3n%20en%20Talagante."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar fecha
+          </a>
+        </article>
+
+        <article class="location-card" aria-labelledby="molina-title">
+          <h3 id="molina-title">Molina</h3>
+          <p class="location-region">Molina, Región del Maule</p>
+
+          <p>Consulta por WhatsApp la dirección exacta de atención.</p>
+
+          <p><strong>Días:</strong> segundo sábado de cada mes.</p>
+          <p><strong>Horario:</strong> desde las 10:00 horas.</p>
+
+          <a
+            class="booking button-green"
+            href="https://wa.me/56997459180?text=Hola%2C%20quisiera%20consultar%20la%20direcci%C3%B3n%20de%20atenci%C3%B3n%20en%20Molina."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar dirección
+          </a>
+        </article>
+
+      </div>
+
+      <div class="location-map">
+        <h3>Ubicación en Buin</h3>
+
+        <!-- Mapa basado en la dirección facilitada. -->
+        <iframe
+          title="Mapa de atención en Buin: Villa Santa Rosa, pasaje San Diego 392"
+          src="https://www.google.com/maps?q=Villa%20Santa%20Rosa%2C%20Pasaje%20San%20Diego%20392%2C%20Buin%2C%20Chile&amp;output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
       </div>
 
     </section>
@@ -1065,6 +1246,7 @@
     queryFields.disabled = false;
   </script>
 
+  <script src="hero-compartido.js"></script>
 </body>
 
 </html>
