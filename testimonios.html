@@ -433,6 +433,15 @@
         padding: 65px 6%;
       }
     }
+
+    .video-card {min-width:0;overflow:hidden;border:1px solid rgba(47,77,77,.28);border-radius:14px;background:var(--blanco);box-shadow:0 6px 18px #2f4d4d12;}
+    .video-card video {display:block;width:100%;height:420px;object-fit:contain;background:#192d2b;}
+    .video-caption {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px;}
+    .video-caption h3 {margin:0;font:24px Georgia,serif;}
+    .video-caption span {font-size:14px;color:var(--verde);}
+    .video-card:focus-within {outline:3px solid var(--verde);outline-offset:3px;}
+    @media (min-width:601px) and (max-width:900px) {.video-grid {grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;}}
+    @media (max-width:600px) {.video-grid {max-width:400px;}.video-card video {height:auto;aspect-ratio:9/16;max-height:65vh;}}
   </style>
 
   <link rel="stylesheet" href="hero-compartido.css">
@@ -553,72 +562,63 @@
         </h2>
 
         <p>
-          Queremos que este sea un espacio auténtico y cercano. Por eso,
-          los testimonios publicados serán compartidos únicamente con la
-          autorización de cada persona.
+          Conoce estas experiencias en primera persona. Pulsa reproducir en el video que quieras ver; puedes pausarlo, ajustar el volumen o ampliarlo a pantalla completa.
         </p>
 
       </div>
 
 
-      <div class="testimonial-grid">
-
-        <article class="testimonial-card">
-
-          <div class="quote-mark">
-            “
-          </div>
-
-          <blockquote>
-            Próximamente compartiremos aquí la experiencia de una persona
-            que haya vivido un proceso de acompañamiento con Caminos del Alma.
-          </blockquote>
-
-          <cite>
-            PRÓXIMAMENTE
-          </cite>
-
-        </article>
-
-
-        <article class="testimonial-card">
-
-          <div class="quote-mark">
-            “
-          </div>
-
-          <blockquote>
-            Este espacio se actualizará con testimonios reales,
-            respetando siempre la privacidad y autorización de quienes
-            deseen compartir su experiencia.
-          </blockquote>
-
-          <cite>
-            PRÓXIMAMENTE
-          </cite>
-
-        </article>
-
-
-        <article class="testimonial-card">
-
-          <div class="quote-mark">
-            “
-          </div>
-
-          <blockquote>
-            Queremos que cada experiencia refleje de manera sincera
-            el acompañamiento, la escucha y el respeto que buscamos entregar.
-          </blockquote>
-
-          <cite>
-            PRÓXIMAMENTE
-          </cite>
-
-        </article>
-
-      </div>
-
+      <div class="testimonial-grid video-grid">
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-01.jpg" aria-label="Testimonio 1">
+ <source src="assets/videos/testimonio-01.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-01.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 01</h3><span>7:58</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-02.jpg" aria-label="Testimonio 2">
+ <source src="assets/videos/testimonio-02.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-02.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 02</h3><span>0:25</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-03.jpg" aria-label="Testimonio 3">
+ <source src="assets/videos/testimonio-03.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-03.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 03</h3><span>0:46</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-04.jpg" aria-label="Testimonio 4">
+ <source src="assets/videos/testimonio-04.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-04.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 04</h3><span>0:21</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-05.jpg" aria-label="Testimonio 5">
+ <source src="assets/videos/testimonio-05.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-05.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 05</h3><span>0:28</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-06.jpg" aria-label="Testimonio 6">
+ <source src="assets/videos/testimonio-06.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-06.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 06</h3><span>0:19</span></div>
+ </article>
+<article class="video-card">
+ <video controls playsinline preload="none" poster="assets/videos/testimonio-07.jpg" aria-label="Testimonio 7">
+ <source src="assets/videos/testimonio-07.mp4" type="video/mp4">
+ Tu navegador no puede reproducir este video. <a href="assets/videos/testimonio-07.mp4">Abrir video</a>
+ </video>
+ <div class="video-caption"><h3>Testimonio 07</h3><span>0:18</span></div>
+ </article>
+</div>
 
       <div class="privacy-note">
 
@@ -693,6 +693,17 @@
     });
   </script>
 
+  <script>
+    const testimonialVideos = [...document.querySelectorAll('.video-card video')];
+    testimonialVideos.forEach(video => {
+      video.addEventListener('play', () => {
+        testimonialVideos.forEach(other => { if (other !== video) other.pause(); });
+      });
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) testimonialVideos.forEach(video => video.pause());
+    });
+  </script>
   <script src="hero-compartido.js"></script>
 </body>
 </html>

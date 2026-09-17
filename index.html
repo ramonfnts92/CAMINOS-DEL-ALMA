@@ -1210,7 +1210,8 @@
       }
 
     </style>
-  </head>
+  <link rel="stylesheet" href="encuentros.css">
+</head>
 
   <body>
     <a class="skip" href="#contenido">Ir al contenido</a>
@@ -1663,6 +1664,23 @@
         </div>
       </section>
 
+
+<section class="encuentros" aria-labelledby="encuentros-title" aria-roledescription="carrusel">
+ <div class="encuentros-inner">
+  <div class="encuentros-heading"><h2 id="encuentros-title">Momentos de encuentro</h2><p>Un vistazo a nuestras jornadas de atención y acompañamiento.</p></div>
+  <div class="encuentros-frame">
+   <div class="encuentros-stage"><div class="encuentros-slide is-current"  aria-hidden="false"><button class="encuentros-photo" type="button" aria-label="Ampliar fotografía 1"><img src="assets/encuentros/encuentro-01.webp" alt="Jornada de atención de Caminos del Alma, fotografía 1" loading="lazy" decoding="async"></button></div>
+<div class="encuentros-slide" inert aria-hidden="true"><button class="encuentros-photo" type="button" aria-label="Ampliar fotografía 2"><img src="assets/encuentros/encuentro-02.webp" alt="Jornada de atención de Caminos del Alma, fotografía 2" loading="lazy" decoding="async"></button></div>
+<div class="encuentros-slide" inert aria-hidden="true"><button class="encuentros-photo" type="button" aria-label="Ampliar fotografía 3"><img src="assets/encuentros/encuentro-03.webp" alt="Jornada de atención de Caminos del Alma, fotografía 3" loading="lazy" decoding="async"></button></div></div>
+   <div class="encuentros-bar"><div class="encuentros-nav"><button type="button" data-enc-prev aria-label="Fotografía anterior">❮</button><span class="encuentros-counter">1 / 3</span><button type="button" data-enc-next aria-label="Fotografía siguiente">❯</button></div><button type="button" data-enc-pause aria-label="Pausar carrusel">Pausar</button></div>
+  </div><p class="encuentros-hint">Haz clic en una foto para ampliarla.</p>
+ </div>
+</section>
+<dialog class="encuentros-modal" aria-label="Fotografías de nuestras jornadas">
+ <div class="encuentros-modal-bar"><button type="button" data-enc-modal-prev aria-label="Fotografía anterior">❮</button><span data-enc-modal-count>1 / 3</span><button type="button" data-enc-modal-next aria-label="Fotografía siguiente">❯</button><button type="button" data-enc-close autofocus>Cerrar ×</button></div>
+ <img alt="Fotografía ampliada de una jornada de atención">
+</dialog>
+
       <!-- Secciones adicionales: la portada y las tarjetas originales se conservan arriba. -->
 
       <div class="lower-content">
@@ -2006,5 +2024,6 @@
 
       })();
     </script>
-  </body>
+  <script src="encuentros.js"></script>
+</body>
 </html>

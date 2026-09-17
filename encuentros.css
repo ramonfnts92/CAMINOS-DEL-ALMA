@@ -1,0 +1,23 @@
+
+.encuentros {padding:48px 5% 64px;background:#f0d699;color:#2f4d4d;}
+.encuentros-inner {max-width:1050px;margin:auto;}
+.encuentros-heading {text-align:center;margin-bottom:28px;}
+.encuentros-heading h2 {font:clamp(32px,4vw,46px)/1.15 Georgia,serif;margin:0 0 14px;}
+.encuentros-heading p {font-size:17px;line-height:1.6;margin:0;}
+.encuentros-frame {border:1px solid #899e51;border-radius:18px;overflow:hidden;background:#2f4d4d;box-shadow:0 12px 30px #2f4d4d18;}
+.encuentros-stage {position:relative;height:clamp(300px,47vw,540px);}
+.encuentros-slide {position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .7s;}
+.encuentros-slide.is-current {opacity:1;visibility:visible;}
+.encuentros-photo {display:block;width:100%;height:100%;padding:0;background:transparent;cursor:zoom-in;}
+.encuentros-photo img {display:block;width:100%;height:100%;object-fit:contain;}
+.encuentros-bar {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#fffaf0;flex-wrap:wrap;}
+.encuentros-bar button,.encuentros-modal button {min-width:44px;min-height:44px;border-radius:8px;background:#4b7550;color:#fffaf0;padding:10px 14px;font:16px Arial,sans-serif;}
+.encuentros-nav {display:flex;align-items:center;gap:12px;}
+.encuentros-counter {font-size:15px;min-width:42px;text-align:center;}
+.encuentros-hint {font-size:13px;margin:12px 0 0;text-align:center;}
+.encuentros-modal {width:min(1100px,96vw);max-width:96vw;max-height:94vh;padding:12px;background:#203635;color:#fffaf0;border:1px solid #899e51;border-radius:12px;}
+.encuentros-modal::backdrop {background:#061412df;}
+.encuentros-modal img {display:block;width:100%;height:72vh;object-fit:contain;}
+.encuentros-modal-bar {display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;}
+@media(max-width:540px){.encuentros{padding:36px 5% 44px;}.encuentros-stage{height:390px;height:min(110vw,470px);}.encuentros-bar{padding:12px;}.encuentros-modal img{height:65vh;}}
+@media(prefers-reduced-motion:reduce){.encuentros-slide{transition:none;}}
